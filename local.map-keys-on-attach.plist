@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Disabled</key>
+    <false/>
+    <key>Label</key>
+    <string>local.map-keys-on-attachon</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/local/bin/map-keys-on-attach</string>
+        <!-- <string>/usr/bin/hidutil</string>
+        <string>property</string>
+        <string>--filter</string>
+        <string>{"VendorID":1240}</string>
+        <string>--set</string>
+        <string>{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000035,"HIDKeyboardModifierMappingDst":0x700000065},{"HIDKeyboardModifierMappingSrc":0x700000065,"HIDKeyboardModifierMappingDst":0x700000035},{"HIDKeyboardModifierMappingSrc":0x700000029,"HIDKeyboardModifierMappingDst":0x700000049},{"HIDKeyboardModifierMappingSrc":0x700000049,"HIDKeyboardModifierMappingDst":0x700000029}]}</string> -->
+    </array>
+    <key>LaunchEvents</key>
+    <dict>
+      <key>com.apple.iokit.matching</key>
+      <dict>
+        <key>com.apple.device-attach</key>
+        <dict>
+          <!-- <key>idProduct</key>
+          <integer>85</integer>
+          <key>idVendor</key>
+          <integer>1240</integer>
+          <key>IOProviderClass</key>
+          <string>IOUSBDevice</string> -->
+          <key>ProductID</key>
+          <integer>85</integer>
+          <key>VendorID</key>
+          <integer>1240</integer>
+          <key>IOProviderClass</key>
+          <string>IOHIDEventService</string>
+          <key>IOMatchLaunchStream</key>
+          <true/>
+        </dict>
+      </dict>
+    </dict>
+    <key>KeepAlive</key>
+    <false/>
+    <!-- <key>RunAtLoad</key>
+    <true/> -->
+    <!-- <key>StandardErrorPath</key>
+    <string>/tmp/map_maltron2.log</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/map_maltron1.log</string>
+    <key>Debug</key>
+    <true/> -->
+  </dict>
+</plist>
